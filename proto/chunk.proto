@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+service ClassificationServer {
+  rpc inquire(stream Image) returns (Response) {}
+}
+
+message Image {
+  bytes buffer = 1;
+}
+
+message Response {
+  string message = 1;
+}
